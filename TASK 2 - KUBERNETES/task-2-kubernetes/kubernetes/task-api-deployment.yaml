@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: task-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: task-api
+  template:
+    metadata:
+      labels:
+        app: task-api
+    spec:
+      containers:
+        - name: task-api
+          image: bsnanda27/task-2-kaiburr:latest
+          ports:
+            - containerPort: 8080
+          env:
+            - name: MONGO_URI
+              value: "mongodb+srv://Cluster30026:LCXSr7RJmix6sbxk@cluster30026.zgbov.mongodb.net/tasksDB"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: task-api-service
+spec:
+  selector:
+    app: task-api
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+  type: NodePort
