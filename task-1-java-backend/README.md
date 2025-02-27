@@ -50,28 +50,28 @@ You can use Postman or `curl` to interact with the RESTful APIs.
 
 ## Screenshots
 
-![Task 1 Screenshot](ScreenShots/SpringBoot-backend.png)
+![Task 1 Screenshot](SCREENSHOTS/SpringBoot-backend.png)
 This screenshot shows - Backend Running (Spring Boot)
 
 
-![Task 1 Screenshot](ScreenShots/Task1-CreateNewTask.png)
+![Task 1 Screenshot](SCREENSHOTS/Task1-CreateNewTask.png)
 This screenshot shows Creating a New Task
 
 
-![Task 1 Screenshot](ScreenShots/Task1-GetAllTasks.png)
+![Task 1 Screenshot](SCREENSHOTS/Task1-GetAllTasks.png)
 This screenshot shows Fetching All Tasks
 
 
-![Task 1 Screenshot](ScreenShots/Task1-GetTaskByID.png)
+![Task 1 Screenshot](SCREENSHOTS/Task1-GetTaskByID.png)
 This screenshot shows Fetching Task by its ID (TaskID)
 
 
-![Task 1 Screenshot](ScreenShots/Task1-ExecuteTaskByID.png)
+![Task 1 Screenshot](SCREENSHOTS/Task1-ExecuteTaskByID.png)
 This screenshot shows Executing a Task by its ID
 
 
 
-![Task 1 Screenshot](ScreenShots/Task1-ExecuteTaskByID2.png)
+![Task 1 Screenshot](SCREENSHOTS/Task1-ExecuteTaskByID2.png)
 Here we can see that the Command Given in task is `echo jason`
 And the we have executed a shell command using `/tasks/{id}/execute` and the output is stored in MongoDB database - `tasksDB`
 
