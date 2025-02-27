@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: busybox-task-runner
+spec:
+  containers:
+    - name: task-container
+      image: busybox
+      command: ["/bin/sh", "-c", "sleep 3600"]  # Default command, will be overridden
+  restartPolicy: Never
