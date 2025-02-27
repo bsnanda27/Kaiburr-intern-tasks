@@ -19,7 +19,7 @@ spec:
             - containerPort: 8080
           env:
             - name: MONGO_URI
-              value: "mongodb+srv://Cluster30026:LCXSr7RJmix6sbxk@cluster30026.zgbov.mongodb.net/tasksDB"
+              value: "mongodb://admin:password@mongodb-service:27017/tasksDB?authSource=admin"
 ---
 apiVersion: v1
 kind: Service

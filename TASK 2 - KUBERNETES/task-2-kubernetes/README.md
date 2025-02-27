@@ -81,7 +81,9 @@ kubectl get pod
 kubectl exec -it <mongo-db-pod> -- mongosh "mongodb://admin:password@mongodb-service:27017/taskdb?authSource=admin"
 db.tasks.find().pretty()
 ```
+![Task 2](SCREENSHOTS/Task2-PVC0.png)
 
+![Task 2](SCREENSHOTS/Task2-PVC1.png)
 ## Conclusion
 
 The Task Manager app was successfully containerized and deployed on Kubernetes. BusyBox pods dynamically execute tasks, and MongoDB data persists even after pod deletion using Persistent Volumes.
