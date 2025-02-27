@@ -75,6 +75,9 @@ This screenshot shows Executing a Task by its ID
 Here we can see that the Command Given in task is `echo jason`
 And the we have executed a shell command using `/tasks/{id}/execute` and the output is stored in MongoDB database - `tasksDB`
 
+![Task 1 Screenshot](SCREENSHOTS/MongoDB.png)
+This screenschot shows the data stored in a database `tasksDB` in MongoDB
+
 You can Also You these `curl` command to test the APIs
 
 - Create A Task
