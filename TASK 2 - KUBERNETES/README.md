@@ -72,18 +72,28 @@ kubectl get events --sort-by=.metadata.creationTimestamp | tail -n 6
 ```
 ![Task 2](SCREENSHOTS/Task2-BusyBox.png)
 
-###MongoDB Data Persistence (Persistent Volume - PV)
+### MongoDB Data Persistence (Persistent Volume - PV)
 
 A Persistent Volume (PV) ensures MongoDB data persists even after the pod is deleted.
+### Testing
 
+- Delete MongoDB pod
+```bash
+kubectl describe pvc/<mongo-pvc>
+kubectl delete po/<mongo-pod-name>
+```
+- Check if the data still exists in MongoDB
 ```bash
 kubectl get pod
 kubectl exec -it <mongo-db-pod> -- mongosh "mongodb://admin:password@mongodb-service:27017/taskdb?authSource=admin"
 db.tasks.find().pretty()
 ```
+
 ![Task 2](SCREENSHOTS/Task2-PVC0.png)
 
 ![Task 2](SCREENSHOTS/Task2-PVC1.png)
+
+These screenshots show that even if the MongoDB pod is deleted the data persists and ensure there is no data loss.
 
 ## Conclusion
 
